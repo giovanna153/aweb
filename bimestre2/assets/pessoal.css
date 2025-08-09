@@ -121,6 +121,7 @@ section h2 {
 #curiosidades ul {
     list-style-type: none;
     padding: 0;
+    display: inline;
 }
 
 #curiosidades li {
@@ -130,7 +131,15 @@ section h2 {
     padding: 12px;
     border-left: 6px solid var(--detalhe);
 }
-
+#curiosidades p {
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: 60px;
+}
+img {
+    width: 150px;
+    height: 150px;
+}
 
 #portfolio {
     overflow: hidden; 
