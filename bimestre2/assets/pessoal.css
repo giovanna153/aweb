@@ -1,224 +1,284 @@
-*{
-    /* border: 1px solid red; */
+* {
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --cor1: #E0E0D2;
-    --cor2: #7E1516;
-    --detalhe: #414A30;
-    --corfonte: #000000;
+    --cor1: #E0E0D2;    /* cor1 */
+    --cor2: #7E1516;   /* cor2 */
+    --detalhe: #414A30;  /* detalhe */
+    --corfonte: #000000;      /* corfonte */
     --destaque: #A5CF57;
+    --titulos: "Bebas Neue", serif;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
+    height: 100%;
+    background-color: var(--cor1);
     color: var(--corfonte);
-    background-color: var(--cor1);  
 }
 
+.body {
+    margin: 0 160px 0 200px;
+}
 
 header {
+    margin-bottom: 25px;
+    padding: 10px 0;
     background-color: var(--cor2);
-    color: var(--cor1);
-    padding: 15px 20px;
+    color: var(--corfonte);
+    border-bottom: 1px solid var(--corfonte);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
     overflow: hidden;
 }
 
-.logo-area {
-    float: left;
-}
-
-.logo-area .round-image {
+header img {
+    height: 80px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
     float: left;
-    margin-right: 15px;
-    border: 3px solid var(--detalhe); 
+    margin: 0 20px 0 30px;
 }
 
 header h1 {
-    float: left;
-    margin: 0;
-    line-height: 60px; 
+    text-align: left;
+    font-size: 33px;
+    color: var(--destaque);
+    line-height: 100px;
+    overflow: hidden;
+    font-family: var(--titulos);
 }
 
 nav {
-    float: right;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 25px;
-    line-height: 60px;
-}
-
-nav a {
-    color: var(--cor1);
-    text-decoration: none;
+    text-align: center;
+    font-size: large;
     font-weight: bold;
-    transition: color 0.3s ease; 
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
+
+header nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--destaque);
+    padding: 0 10px;
+    margin-top: 20px;
+    font-family: var(--titulos);
+    font-size: 28px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--destaque); 
-}
-
-
-section {
-    padding: 40px 80px;
-    margin: 20px 0;
-}
-
-section h2 {
-    color: var(--corfonte);
-    border-bottom: 2px solid var(--detalhe);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-
-.hero {
-    text-align: center;
-    background-color: #414a3084;
-    box-shadow: none;
-    margin: 0;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: var(--detalhe); 
     color: var(--destaque);
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    transform: scale(1.05);
 }
 
-.cta-button:hover {
-    background-color: #414a30be;
-    color: var(--cor1);
-}
-
-#curiosidades ul {
-    list-style-type: none;
-    padding: 0;
-    display: inline;
-}
-
-#curiosidades li {
-    background-color: var(--cor2);
-    color: var(--cor1);
-    margin-bottom: 10px;
-    padding: 12px;
-    border-left: 6px solid var(--detalhe);
-}
-#curiosidades p {
-    text-align: center;
-    margin-top: -80px;
-    margin-bottom: 60px;
-}
-img {
-    width: 150px;
+.espaco {
     height: 150px;
 }
 
-#portfolio {
-    overflow: hidden; 
+.cara {
+    /* height: 100vh; */
+    padding-top: 20px;
+    text-align: justify;
 }
 
-.portfolio-item {
-    width: 23%;
-    margin: 1%;
-    border: 1px solid var(--detalhe);
-    padding: 10px;
-    box-sizing: border-box;
+.cara div {
+    padding-top: 150px;
+}
+
+.cara h1 {
+    font-size: 100px;
+    font-family: var(--titulos);
+}
+
+.perfil {
+    height: 522px;
+    width: 450px;
+    border-radius: 40% 40% 0 0;
     float: left;
-    background-color: var(--cor2);
-    color: var(--cor1);
-    text-align: center;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 50px;
+    object-fit: cover;
 }
 
-.portfolio-item:hover {
+p {
+    font-size: 19px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.botao-link {
+    margin-top: 25px;
+    margin-right: 25px;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 0 20px 0 20px;
+    background-color: var(--destaque);
+    color: var(--fontcor);
+    border: 2px solid var(--headercolor);
+    font-family: var(--titulos);
+    font-size: 28px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.botao-link:hover {
+    background-color: var(--headercolor);
+    color: var(--backcolor);
     transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    border-color: var(--destaque);
 }
 
-.portfolio-item img {
+.me {
+    text-align: justify;
+    overflow: hidden;
+}
+
+.me p {
+    float: left;
+    width: 66%;
+    margin-top: 5px;
+}
+
+.me img {
+    float: right;
+    width: 40%;
+    margin-bottom: -20px;
+}
+
+h2 {
+    font-family: var(--titulos);
+    font-size: 60px;
+}
+
+.tex1 {
+    max-width: 1000px;
+    margin-top: 120px;
+}
+
+.card img {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-/* --- Rotina (Tabela) --- */
-#rotina table {
+.card {
+    display: inline-block;
+    background-color: var(--headercolor);
+    color: var(--backcolor);
+    border: 1px solid var(--fontcor);
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 15px;
+}
+
+.cards {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    font-family: var(--titulos);
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.tabela {
     width: 100%;
     border-collapse: collapse;
+    margin: 15px 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: var(--fontcor);
+    background-color: var(--backcolor);
 }
 
-#rotina th, #rotina td {
-    border: 1px solid var(--detalhe);
-    padding: 12px;
-    text-align: center;
+.tabela th, .tabela td {
+    padding: 12px 15px;
+    border: 1px solid var(--segundacor);
+    text-align: left;
 }
 
-#rotina th {
-    background-color: var(--cor2);
-    color: var(--cor1);
+.tabela th {
+    background-color: var(--headercolor);
+    color: var(--backcolor);
+    font-family: var(--titulos);
+    font-size: 24px;
 }
 
-#rotina tr:nth-child(even) {
-    background-color: #414a3084; 
+.tabela tr:nth-child(even) {
+    background-color: var(--destaque);
 }
 
+.tabela tbody tr:hover {
+    background-color: var(--headercolor);
+    opacity: 0.8;
+    color: var(--backcolor);
+    cursor: pointer;
+}
 
 footer {
-    clear: both;
-    background-color: var(--cor2);
-    color: var(--cor1);
-    padding: 20px;
+    background-color: var(--headercolor);
+    color: var(--backcolor);
+    padding: 20px 0;
+    font-family: var(--titulos);
+    font-size: 20px;
+    width: 100%;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    margin: 0 !important;
 }
 
-.footer-nav a {
-    color: var(--cor1);
-    margin: 0 10px;
+footer a {
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--segundacor);
+    font-family: var(--titulos);
+    font-size: 20px;
+    transition: 0.3s;
 }
 
-.footer-nav a:hover {
+footer a:hover {
     color: var(--destaque);
+    transform: scale(1.05);
+    font-size: 25px;
 }
 
-.social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s ease;
+#Contato i {
+    color: var(--destaque);
+    font-size: 1.6em;
+    margin: 10px;
 }
 
-.social-icons a:hover {
-    color: #3498db;
+#Contato i:hover {
+    color: var(--segundacor);
+    font-size: 1em;
+    margin: 10px;
+}
+
+/* Imagens */
+
+.img {
+    height: 500px;
+    padding-left: 220px;
+}
+
+.img3 {
+    float: right;
+    width: 50%;
+    margin-top: 80px;
 }
