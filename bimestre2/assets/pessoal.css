@@ -96,9 +96,9 @@ nav a:hover {
 }
 
 .perfil {
-    height: 522px;
-    width: 450px;
-    border-radius: 40% 40% 0 0;
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
     float: left;
     margin-right: 50px;
     object-fit: cover;
