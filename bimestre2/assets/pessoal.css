@@ -4,10 +4,10 @@
 }
 
 :root {
-    --cor1: #E0E0D2;   /* cor1 */
-    --cor2: #7E1516;   /* cor2 */
-    --detalhe: #414A30;  /* detalhe */
-    --corfonte: #000000; /* corfonte */
+    --cor1: #E0E0D2;  
+    --cor2: #7E1516;   
+    --detalhe: #414A30;  
+    --corfonte: #000000; 
     --destaque: #A5CF57;
     --titulos: "Bebas Neue", serif;
 }
@@ -267,4 +267,12 @@ footer a:hover {
     color: var(--segundacor);
     font-size: 1em;
     margin: 10px;
+}
+
+.foto-direita {
+  float: right; 
+  width: 350px; 
+  height: auto;
+  margin-left: 30px; 
+  border-radius: 10px;
 }
