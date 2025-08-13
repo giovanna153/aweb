@@ -95,6 +95,9 @@ nav a:hover {
     font-family: var(--titulos);
 }
 
+.icon {
+    
+}
 .perfil {
     height: 420px;
     width: 420px;
